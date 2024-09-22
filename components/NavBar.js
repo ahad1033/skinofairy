@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import {
@@ -10,6 +8,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { ModeToggle } from "./theme-btn";
 
 // ----------------------------------------------------------------------
 const Navbar = () => {
@@ -18,9 +17,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 py-2 flex items-center justify-between relative">
         {/* Logo */}
         <div className="text-lg font-bold">
-          <Link href="/" className="text-white">
-            Ahad Blogs
-          </Link>
+          <Link href="/">Ahad Blogs</Link>
         </div>
 
         {/* Desktop Menu Links */}
@@ -50,14 +47,18 @@ const Navbar = () => {
             Contact
           </Link>
           <Button variant="outline">Button</Button>
+          <ModeToggle />
         </div>
 
         {/* Mobile Menu Button */}
         <div className="lg:hidden absolute right-4 top-1/2 transform -translate-y-1/2">
           <Sheet>
+            <span className="mx-2">
+              <ModeToggle />
+            </span>
             <SheetTrigger>
               <svg
-                className="w-6 h-6 text-white focus:outline-none"
+                className="w-6 h-6 focus:outline-none"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -71,6 +72,7 @@ const Navbar = () => {
                 />
               </svg>
             </SheetTrigger>
+
             <SheetContent>
               <SheetHeader>
                 <SheetTitle className="text-center font-bold my-4">

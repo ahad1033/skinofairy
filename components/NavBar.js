@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -12,8 +15,41 @@ import { ModeToggle } from "./theme-btn";
 
 // ----------------------------------------------------------------------
 const Navbar = () => {
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      const hideThreshold = 0;
+      const showThreshold = window.innerHeight * 0.5;
+
+      // Hide navbar when scrolling down
+      if (currentScrollY > hideThreshold && currentScrollY > lastScrollY) {
+        setIsVisible(false);
+      }
+
+      // Show navbar after scrolling down 50vh
+      if (currentScrollY > showThreshold) {
+        setIsVisible(true);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollY]);
+
   return (
-    <nav className="p-4 bg-background/50 sticky top-0 backdrop-blur border-b">
+    <nav
+      className={`p-4 bg-background/50 sticky top-0 backdrop-blur border-b z-50 transition-transform duration-500 ${
+        isVisible ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
       <div className="container mx-auto px-4 py-2 flex items-center justify-between relative">
         {/* Logo */}
         <div className="text-lg font-bold">

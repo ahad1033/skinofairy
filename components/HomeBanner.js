@@ -15,7 +15,7 @@ const Banner = () => {
 
       <div className="absolute inset-0 bg-black/50 z-10 flex justify-center items-center">
         <div className="text-center text-white p-4">
-          <h1 className="font-bold text-3xl md:text-4xl lg:text-8xl sm:text-3xl mb-5 tracking-normal md:tracking-wide lg:tracking-widest">
+          <h1 className="font-bold text-3xl md:text-7xl lg:text-8xl sm:text-3xl mb-5 tracking-normal md:tracking-wide lg:tracking-widest">
             Revitalize Your Journey
           </h1>
 

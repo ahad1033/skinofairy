@@ -1,14 +1,18 @@
 import blogs from "@/data/blogs";
 import Image from "next/image";
 
+import Container from "./Container";
+import ContainerHeader from "./ContainerHeader";
+
 // ----------------------------------------------------------------------
 const AllBlogs = () => {
   return (
-    <section className="container mx-auto py-12">
-      <h2 className="text-4xl font-bold text-center mb-4">Our Blogs</h2>
-      <p className="text-md text-center mb-8">
-        Get informed about latest trends
-      </p>
+    <Container>
+      <ContainerHeader
+        title="Our Blogs"
+        subtitle="Get informed about latest trends"
+      />
+
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {blogs.slice(0, 9).map((blog) => (
           <div
@@ -38,7 +42,7 @@ const AllBlogs = () => {
           </div>
         ))}
       </div>
-    </section>
+    </Container>
   );
 };
 

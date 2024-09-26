@@ -89,3 +89,11 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Add this in your CSS file */
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}

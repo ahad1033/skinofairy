@@ -1,6 +1,8 @@
-import blogs from "@/data/blogs";
 import Image from "next/image";
+import blogs from "@/data/blogs";
 import Container from "./Container";
+import { Button } from "./ui/button";
+import { MoveRight } from "lucide-react";
 import ContainerHeader from "./ContainerHeader";
 
 // ----------------------------------------------------------------------
@@ -21,7 +23,7 @@ const AllBlogs = () => {
         {blogs.slice(0, 6).map((blog, index) => (
           <div
             key={blog.id}
-            className={`rounded-lg shadow-md overflow-hidden h-[450px] ${
+            className={`rounded-lg shadow-md overflow-hidden h-[500px] ${
               shouldTakeTwoColumns(index)
                 ? "col-span-2 sm:col-span-2"
                 : "col-span-1 sm:col-span-1"
@@ -45,7 +47,12 @@ const AllBlogs = () => {
                   {new Date(blog.createdAt).toLocaleDateString()}
                 </p>
               </div>
-              <p className="mt-2 flex-grow">{blog.description}</p>
+              <p className="mt-2 line-clamp-2">{blog.description}</p>
+              <div className="mt-4 gap-4 flex-grow">
+                <Button variant="outline">
+                  Read More <MoveRight className="ms-2 w-4 h-4" />
+                </Button>
+              </div>
             </div>
           </div>
         ))}

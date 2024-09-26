@@ -1,8 +1,12 @@
 import blogs from "@/data/blogs";
 import Image from "next/image";
-
 import Container from "./Container";
 import ContainerHeader from "./ContainerHeader";
+
+// ----------------------------------------------------------------------
+const shouldTakeTwoColumns = (index) => {
+  return [0, 3, 4, 7, 8].includes(index);
+};
 
 // ----------------------------------------------------------------------
 const AllBlogs = () => {
@@ -13,11 +17,15 @@ const AllBlogs = () => {
         subtitle="Get informed about latest trends"
       />
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {blogs.slice(0, 9).map((blog) => (
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        {blogs.slice(0, 6).map((blog, index) => (
           <div
             key={blog.id}
-            className="relativ rounded-lg shadow-md overflow-hidden h-[450px]"
+            className={`rounded-lg shadow-md overflow-hidden h-[450px] ${
+              shouldTakeTwoColumns(index)
+                ? "col-span-2 sm:col-span-2"
+                : "col-span-1 sm:col-span-1"
+            }`}
           >
             <div className="relative h-72 overflow-hidden">
               <Image

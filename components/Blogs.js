@@ -1,5 +1,6 @@
 import Image from "next/image";
 import blogs from "@/data/blogs";
+import { fDate } from "@/lib/fDate";
 import Container from "./Container";
 import { Button } from "./ui/button";
 import { MoveRight } from "lucide-react";
@@ -23,13 +24,13 @@ const AllBlogs = () => {
         {blogs.slice(0, 6).map((blog, index) => (
           <div
             key={blog.id}
-            className={`rounded-lg shadow-md overflow-hidden h-[500px] ${
+            className={`rounded-lg shadow-md overflow-hidden h-[400px] md:h-[500px] lg:h-[500px] ${
               shouldTakeTwoColumns(index)
-                ? "col-span-2 sm:col-span-2"
-                : "col-span-1 sm:col-span-1"
+                ? "col-span-1 md:col-span-2 lg:col-span-2"
+                : "col-span-1 md:col-span-1 lg:col-span-1"
             }`}
           >
-            <div className="relative h-72 overflow-hidden">
+            <div className="relative h-40 md:h-72 lg:h-72 overflow-hidden">
               <Image
                 src={blog.image}
                 alt={blog.title}
@@ -43,11 +44,10 @@ const AllBlogs = () => {
               <div className="flex items-center text-sm text-gray-500 mb-2">
                 <div className="border-l border-gray-400 h-7 mr-2"></div>
                 <p>
-                  By {blog.author} on{" "}
-                  {new Date(blog.createdAt).toLocaleDateString()}
+                  By {blog.author} on {fDate(blog.createdAt)}
                 </p>
               </div>
-              <p className="mt-2 line-clamp-2">{blog.description}</p>
+              <p className="mt-2 sm:text-sm line-clamp-2">{blog.description}</p>
               <div className="mt-4 gap-4 flex-grow">
                 <Button variant="outline">
                   Read More <MoveRight className="ms-2 w-4 h-4" />

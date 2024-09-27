@@ -1,5 +1,6 @@
 import AllBlogs from "@/components/Blogs";
 import Banner from "@/components/HomeBanner";
+import YouMayLike from "@/components/YouMayLike";
 
 // ----------------------------------------------------------------------
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
     <main>
       <Banner />
       <AllBlogs />
+      <YouMayLike />
     </main>
   );
 }

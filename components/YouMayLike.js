@@ -1,0 +1,47 @@
+import React from "react";
+import Image from "next/image";
+import blogs from "@/data/blogs";
+import Container from "./Container";
+import { fDate } from "@/lib/fDate";
+import ContainerHeader from "./ContainerHeader";
+
+// ----------------------------------------------------------------------
+const YouMayLike = () => {
+  return (
+    <Container>
+      <ContainerHeader title="You May Like" />
+
+      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8">
+        {blogs.slice(0, 4).map((blog) => (
+          <div
+            key={blog.id}
+            className="flex flex-col gap-2 hover:opacity-75 cursor-pointer"
+          >
+            <div className="relative bg-muted rounded-md aspect-video mb-4 overflow-hidden">
+              <Image
+                src={blog.image}
+                alt={blog.title}
+                layout="fill"
+                objectFit="cover"
+                className="transition-transform duration-300 hover:scale-105"
+              />
+            </div>
+            <div className="ms-2">
+              <h3 className="text-md md:text-lg lg:text-lg font-bold mb-2">
+                {blog.title}
+              </h3>
+              <div className="flex items-center text-sm text-gray-500 mb-2">
+                <div className="border-l border-gray-400 h-7 mr-2"></div>
+                <p className="text-xs md:text-base lg:text-base">
+                  By {blog.author} on {fDate(blog.createdAt)}
+                </p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </Container>
+  );
+};
+
+export default YouMayLike;

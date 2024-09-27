@@ -14,8 +14,8 @@ import Container from "./Container";
 const fakeCategories = [
   { id: 1, categoryName: "Fashion", image: "/images/blog.jpg" },
   { id: 2, categoryName: "Electronics", image: "/images/blog.jpg" },
-  { id: 3, categoryName: "Home & Living", image: "/images/blog.jpg.jpg" },
-  { id: 4, categoryName: "Beauty & Health", image: "/images/blog.jpg.jpg" },
+  { id: 3, categoryName: "Home & Living", image: "/images/blog.jpg" },
+  { id: 4, categoryName: "Beauty & Health", image: "/images/blog.jpg" },
   { id: 5, categoryName: "Sports", image: "/images/blog.jpg" },
   { id: 6, categoryName: "Books", image: "/images/blog.jpg" },
   { id: 7, categoryName: "Toys", image: "/images/blog.jpg" },

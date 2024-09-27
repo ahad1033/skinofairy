@@ -32,7 +32,7 @@ const Navbar = () => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       const hideThreshold = 0;
-      const showThreshold = window.innerHeight * 0.5;
+      const showThreshold = window.innerHeight * 0.45;
 
       // Hide navbar when scrolling down
       if (currentScrollY > hideThreshold && currentScrollY > lastScrollY) {

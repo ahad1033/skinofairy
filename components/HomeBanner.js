@@ -3,7 +3,7 @@ import Image from "next/image";
 // ----------------------------------------------------------------------
 const Banner = () => {
   return (
-    <section className="relative w-full h-[70vh] sm:h-[60vh] lg:h-[100vh] flex justify-center items-center overflow-hidden">
+    <section className="relative w-full h-[70vh] sm:h-[60vh] lg:h-[100vh] flex justify-center items-center overflow-hidden mb-8 md:mb-12 lg:mb-20">
       <Image
         fill
         priority

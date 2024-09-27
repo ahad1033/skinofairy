@@ -46,7 +46,7 @@ const Categories = () => {
             <CarouselContent>
               {fakeCategories.concat(fakeCategories).map((category) => (
                 <CarouselItem
-                  className="basis-1/4 lg:basis-1/6"
+                  className="basis-1/4 md:basis-1/6 lg:basis-1/6"
                   key={category.id}
                 >
                   <div className="flex rounded-md aspect-square bg-muted items-center justify-center p-2">
@@ -57,7 +57,7 @@ const Categories = () => {
                       objectFit="cover"
                       className="transition-transform duration-300 hover:scale-105"
                     />
-                    <span className="text-sm">{category.categoryName}</span>
+                    <span className="text-xs md:text-sm lg:text-sm">{category.categoryName}</span>
                   </div>
                 </CarouselItem>
               ))}

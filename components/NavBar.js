@@ -17,7 +17,7 @@ import { ModeToggle } from "./theme-btn";
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/blogs", label: "Blogs" },
-  { href: "/about", label: "About" },
+  // { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
 

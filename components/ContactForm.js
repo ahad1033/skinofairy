@@ -8,6 +8,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { MoveRight } from "lucide-react";
 import Container from "./Container";
 
+// ----------------------------------------------------------------------
+
 export const ContactForm = () => {
   const [formData, setFormData] = useState({
     firstName: "",
@@ -37,12 +39,12 @@ export const ContactForm = () => {
         <div className="flex justify-center items-center">
           <form
             onSubmit={handleSubmit}
-            className="rounded-md max-w-sm flex flex-col border p-8 gap-4 w-full"
+            className="rounded-md max-w-lg flex flex-col border p-8 gap-4 w-full"
           >
             {/* First Name and Last Name */}
             <div className="grid grid-cols-2 gap-4">
               <div className="grid items-center gap-1">
-                <Label htmlFor="firstName">First Name</Label>
+                <Label className='mb-2' htmlFor="firstName">First Name</Label>
                 <Input
                   id="firstName"
                   name="firstName"
@@ -53,7 +55,7 @@ export const ContactForm = () => {
                 />
               </div>
               <div className="grid items-center gap-1">
-                <Label htmlFor="lastName">Last Name</Label>
+                <Label className='mb-2' htmlFor="lastName">Last Name</Label>
                 <Input
                   id="lastName"
                   name="lastName"
@@ -67,7 +69,7 @@ export const ContactForm = () => {
 
             {/* Email */}
             <div className="grid w-full items-center gap-1">
-              <Label htmlFor="email">Email</Label>
+              <Label className='mb-2' htmlFor="email">Email</Label>
               <Input
                 id="email"
                 name="email"
@@ -80,7 +82,7 @@ export const ContactForm = () => {
 
             {/* Message */}
             <div className="grid w-full items-center gap-1">
-              <Label htmlFor="message">Message</Label>
+              <Label className='mb-2' htmlFor="message">Message</Label>
               <Textarea
                 id="message"
                 name="message"
@@ -92,7 +94,7 @@ export const ContactForm = () => {
             </div>
 
             {/* Submit Button */}
-            <Button type="submit" className="gap-4 w-full">
+            <Button type="submit" className="gap-4 w-full mt-3">
               Send Message <MoveRight className="w-4 h-4" />
             </Button>
           </form>
@@ -113,23 +115,15 @@ export const ContactForm = () => {
           </div>
           <div className="flex flex-row gap-6 items-start text-left">
             <div className="flex flex-col gap-1">
-              <p>Our customer service is available:</p>
-              <p className="text-muted-foreground text-sm">
-                Monday to Friday, 9:00 AM - 5:00 PM
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-row gap-6 items-start text-left">
-            <div className="flex flex-col gap-1">
               <p>Call us at:</p>
-              <p className="text-muted-foreground text-sm">+1 (123) 456-7890</p>
+              <p className="text-muted-foreground text-sm">+880 1636428995</p>
             </div>
           </div>
           <div className="flex flex-row gap-6 items-start text-left">
             <div className="flex flex-col gap-1">
               <p>Email us at:</p>
               <p className="text-muted-foreground text-sm">
-                support@company.com
+                ahad.dev2@gmail.com
               </p>
             </div>
           </div>

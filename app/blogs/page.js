@@ -6,6 +6,7 @@ import { MoveRight } from "lucide-react";
 import Container from "@/components/Container";
 import { Button } from "@/components/ui/button";
 import ContainerHeader from "@/components/ContainerHeader";
+import { getAllPosts, getPostData } from "@/lib/mock_blogs";
 
 // ----------------------------------------------------------------------
 // Checks if it's the first blog to use a special layout
@@ -15,13 +16,38 @@ const isFirstBlog = (index) => {
 
 // ----------------------------------------------------------------------
 
-const BlogsPage = () => {
+const BlogsPage = async () => {
+  const allPostsData = await getAllPosts();
+  const single = await getPostData("blog-one");
+
+  console.log("MD BLOGS:", allPostsData);
+  console.log("BLOGS-1:", single);
+
   return (
     <Container className="max-w-screen-lg">
       <ContainerHeader
         title="Our Blogs"
         subtitle="Get informed about the latest trends"
       />
+
+      {/* <div className="max-w-3xl mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold mb-4">{single.title}</h1>
+        <p className="text-gray-600 mb-2">{single.date}</p>
+
+        <Image
+          width={500}
+          height={500}
+          src={single.image}
+          alt={single.title}
+          className="mb-4 w-full rounded-lg"
+        />
+
+        <div
+          // className="prose prose-lg"
+          className="prose prose-lg mx-auto dark:prose-invert"
+          dangerouslySetInnerHTML={{ __html: single.contentHtml }}
+        />
+      </div> */}
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {blogs.map((blog, index) => (
@@ -46,7 +72,9 @@ const BlogsPage = () => {
             <div className="flex flex-col gap-2">
               <h3
                 className={`tracking-tight ${
-                  isFirstBlog(index) ? "text-4xl" : "text-xl md:text-2xl lg:text-2xl"
+                  isFirstBlog(index)
+                    ? "text-4xl"
+                    : "text-xl md:text-2xl lg:text-2xl"
                 }`}
               >
                 {blog.title}

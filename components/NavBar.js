@@ -32,7 +32,7 @@ const Navbar = () => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       const hideThreshold = 0;
-      const showThreshold = window.innerHeight * 0.45;
+      const showThreshold = window.innerHeight * 0.3;
 
       // Hide navbar when scrolling down
       if (currentScrollY > hideThreshold && currentScrollY > lastScrollY) {
@@ -83,7 +83,7 @@ const Navbar = () => {
               {link.label}
             </Link>
           ))}
-          <Button variant="outline">Button</Button>
+          {/* <Button variant="outline">Button</Button> */}
           <ModeToggle />
         </div>
 
@@ -130,7 +130,7 @@ const Navbar = () => {
                         <span className="absolute left-0 bottom-0 h-[2px] w-full bg-black scale-x-0 transition-transform duration-300 group-hover:scale-x-100" />
                       </Link>
                     ))}
-                    <Button variant="outline">Button</Button>
+                    {/* <Button variant="outline">Button</Button> */}
                   </div>
                 </SheetDescription>
               </SheetHeader>

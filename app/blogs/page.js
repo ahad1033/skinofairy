@@ -1,12 +1,12 @@
 import React from "react";
 import Image from "next/image";
-import blogs from "@/data/blogs";
 import { fDate } from "@/lib/fDate";
 import { MoveRight } from "lucide-react";
 import Container from "@/components/Container";
 import { Button } from "@/components/ui/button";
 import ContainerHeader from "@/components/ContainerHeader";
 import { getAllPosts, getPostData } from "@/lib/mock_blogs";
+import Link from "next/link";
 
 // ----------------------------------------------------------------------
 // Checks if it's the first blog to use a special layout
@@ -30,27 +30,15 @@ const BlogsPage = async () => {
         subtitle="Get informed about the latest trends"
       />
 
-      {/* <div className="max-w-3xl mx-auto px-4 py-8">
-        <h1 className="text-4xl font-bold mb-4">{single.title}</h1>
-        <p className="text-gray-600 mb-2">{single.date}</p>
-
-        <Image
-          width={500}
-          height={500}
-          src={single.image}
-          alt={single.title}
-          className="mb-4 w-full rounded-lg"
-        />
-
+      {/* <div className="mx-auto">
         <div
-          // className="prose prose-lg"
           className="prose prose-lg mx-auto dark:prose-invert"
           dangerouslySetInnerHTML={{ __html: single.contentHtml }}
         />
       </div> */}
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {blogs.map((blog, index) => (
+        {allPostsData.map((blog, index) => (
           <div
             key={blog.id}
             className={`flex flex-col gap-4 cursor-pointer ${
@@ -59,13 +47,15 @@ const BlogsPage = async () => {
           >
             {/* Image Section */}
             <div className="relative rounded-md aspect-video overflow-hidden">
-              <Image
-                src={blog.image}
-                alt={blog.title}
-                layout="fill"
-                objectFit="cover"
-                className="transition-transform duration-300 hover:scale-110"
-              />
+              <Link href={`/blog/${blog.id}`}>
+                <Image
+                  src={blog.image}
+                  alt={blog.title}
+                  layout="fill"
+                  objectFit="cover"
+                  className="transition-transform duration-300 hover:scale-110"
+                />
+              </Link>
             </div>
 
             {/* Blog Content */}
@@ -82,16 +72,25 @@ const BlogsPage = async () => {
               <div className="flex items-center text-sm text-gray-500 mb-2">
                 <div className="border-l border-gray-400 h-7 mr-2"></div>
                 <p>
-                  By {blog.author} on {fDate(blog.createdAt)}
+                  By {blog.author} on {fDate(blog.date)}
                 </p>
               </div>
               <p className="text-muted-foreground text-sm md:text-base lg:text-base line-clamp-3">
-                {blog.description}
+                {blog.summary}
               </p>
-              <div className="mt-4 gap-4 flex-grow">
+              {/* <div className="mt-4 gap-4 flex-grow">
                 <Button>
                   Read More <MoveRight className="ms-2 w-4 h-4" />
                 </Button>
+              </div> */}
+              <div className="mt-4 gap-4 flex-grow">
+                <Link href={`/blog/${blog.id}`}>
+                  {/* <a className="mt-4 flex items-center gap-2 text-blue-600"> */}
+                    <Button>
+                      Read More <MoveRight className="ms-2 w-4 h-4" />
+                    </Button>
+                  {/* </a> */}
+                </Link>
               </div>
             </div>
           </div>

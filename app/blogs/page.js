@@ -38,7 +38,7 @@ const BlogsPage = async () => {
       </div> */}
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {allPostsData.map((blog, index) => (
+        {allPostsData.reverse().map((blog, index) => (
           <div
             key={blog.id}
             className={`flex flex-col gap-4 cursor-pointer ${
@@ -86,9 +86,9 @@ const BlogsPage = async () => {
               <div className="mt-4 gap-4 flex-grow">
                 <Link href={`/blog/${blog.id}`}>
                   {/* <a className="mt-4 flex items-center gap-2 text-blue-600"> */}
-                    <Button>
-                      Read More <MoveRight className="ms-2 w-4 h-4" />
-                    </Button>
+                  <Button>
+                    Read More <MoveRight className="ms-2 w-4 h-4" />
+                  </Button>
                   {/* </a> */}
                 </Link>
               </div>

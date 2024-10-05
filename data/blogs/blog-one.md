@@ -1,7 +1,7 @@
 ---
 title: "Perfect Skincare Routine: Your Ultimate Guide"
 date: "2024-10-04"
-author: "Ahad Ahamed"
+author: "Admin"
 image: "/images/blog/blog-one/one.jpg"
 summary: "Getting radiant, healthy skin is not a secret. It's all about perfecting your skincare routine. This guide will show you how to create a routine that fits your skin type and concerns. You'll learn about cleansing, toning, moisturizing, and protecting your skin from the sun."
 ---

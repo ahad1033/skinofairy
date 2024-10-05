@@ -235,7 +235,7 @@ Dermatologists are experts in all things skin-related. They offer invaluable **p
 
 By working with a dermatologist, you can create a skincare routine that fits you perfectly. Their **professional advice** is key to your healthiest, most radiant complexion.
 
-![My Blog Image](/images/blog/blog1.jpg)
+![Skin Health](/images/blog/blog-one/five.jpg)
 
 > "The path to healthy, glowing skin starts with a personalized approach. Working with a dermatologist can make all the difference." - Dr. Emily Hartman, Board-Certified Dermatologist
 

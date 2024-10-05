@@ -5,6 +5,8 @@ import { getPostData } from "@/lib/mock_blogs";
 const BlogDetails = async ({ params }) => {
   const postData = await getPostData(params?.id);
 
+  console.log(postData);
+
   return (
     <>
       {/* SEO Metadata */}

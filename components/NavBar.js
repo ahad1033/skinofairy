@@ -69,7 +69,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 md:px-8 lg:px-16 py-2 flex items-center justify-between relative">
         {/* Logo */}
         <div className="text-lg font-bold">
-          <Link href="/">Ahad Blogs</Link>
+          <Link href="/">Skinofairy</Link>
         </div>
 
         {/* Desktop Menu Links */}
@@ -115,7 +115,7 @@ const Navbar = () => {
             <SheetContent>
               <SheetHeader>
                 <SheetTitle className="text-center font-bold my-4">
-                  Ahad Blogs
+                  Skinofairy
                 </SheetTitle>
                 <SheetDescription>
                   <div className="flex flex-col gap-6">

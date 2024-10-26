@@ -4,9 +4,12 @@ import blogs from "@/data/blogs";
 import Container from "./Container";
 import { fDate } from "@/lib/fDate";
 import ContainerHeader from "./ContainerHeader";
+import { getAllPosts } from "@/lib/mock_blogs";
 
 // ----------------------------------------------------------------------
-const YouMayLike = () => {
+const YouMayLike = async() => {
+  const allPostsData = await getAllPosts();
+
   return (
     <Container>
       <ContainerHeader
@@ -15,9 +18,9 @@ const YouMayLike = () => {
       />
 
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6 md:gap-8">
-        {blogs.slice(0, 4).map((blog) => (
+        {allPostsData?.slice(0, 4).reverse()?.map((blog, index) => (
           <div
-            key={blog.id}
+            key={index}
             className="flex flex-col gap-2 hover:opacity-75 cursor-pointer"
           >
             <div className="relative bg-muted rounded-md aspect-video mb-0 md:mb-2 lg:mb-2 overflow-hidden">
@@ -40,7 +43,7 @@ const YouMayLike = () => {
               <div className="flex items-center text-sm text-gray-500">
                 <div className="border-l border-gray-400 h-7 mr-2"></div>
                 <p className="text-xs md:text-sm lg:text-base">
-                  By {blog.author} on {fDate(blog.createdAt)}
+                  By {blog.author} on {fDate(blog.date)}
                 </p>
               </div>
             </div>

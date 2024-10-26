@@ -10,7 +10,7 @@ const Banner = () => {
         quality={100}
         alt="Blog Banner"
         className="object-cover"
-        src="/images/banner/banner.jpg"
+        src="/images/banner/blog-cover.webp"
       />
 
       <div className="absolute inset-0 bg-black/50 z-10 flex justify-center items-center">

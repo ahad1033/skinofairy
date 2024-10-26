@@ -1,14 +1,12 @@
 export default function robots() {
-  return new Response(
-    `User-agent: *
-  Allow: /
-  
-  Sitemap: https://skinofairy.com/sitemap.xml
-  `,
-    {
-      headers: {
-        "Content-Type": "text/plain",
+  return {
+    rules: [
+      {
+        userAgent: "*",
+        allow: "/",
+        disallow: [],
       },
-    }
-  );
+    ],
+    sitemap: "http://skinofairy.com/sitemap.xml",
+  };
 }

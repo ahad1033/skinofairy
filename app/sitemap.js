@@ -1,44 +1,35 @@
-import { getAllPostIds } from "@/lib/mock_blogs";
+import { getAllPosts } from "@/lib/mock_blogs";
 
 export default async function sitemap() {
-  // Define your static pages
   const staticUrls = [
-    { url: "/", priority: 1.0 },
-    { url: "/blogs", priority: 0.8 },
-    { url: "/contact", priority: 0.5 },
-  ];
-
-  // Fetch dynamic pages (e.g., blog posts)
-  const blogPosts = await getAllPostIds();
-
-  // Generate URLs for the sitemap
-  const urls = [
-    ...staticUrls,
-    ...blogPosts.map((post) => ({
-      url: `/blog/${post.id}`,
-      priority: 0.7,
-    })),
-  ];
-
-  // Format the sitemap as XML
-  const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
-  <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    ${urls
-      .map(
-        ({ url, priority }) => `
-        <url>
-          <loc>https://skinofairy.com${url}</loc>
-          <changefreq>weekly</changefreq>
-          <priority>${priority}</priority>
-        </url>`
-      )
-      .join("")}
-  </urlset>`;
-
-  // Return the sitemap
-  return new Response(sitemapXml, {
-    headers: {
-      "Content-Type": "application/xml",
+    {
+      url: "http://skinofairy.com",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 1,
     },
-  });
+    {
+      url: "http://skinofairy.com/contact",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: "http://skinofairy.com/blogs",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.5,
+    },
+  ];
+
+  // Dynamic blog pages
+  const blogPosts = getAllPosts();
+  const blogUrls = blogPosts.map((post) => ({
+    url: `http://skinofairy.com/blog/${post.id}`,
+    lastModified: new Date(post.date),
+    changeFrequency: "weekly",
+    priority: 0.7,
+  }));
+
+  return [...staticUrls, ...blogUrls];
 }

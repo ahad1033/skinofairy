@@ -38,13 +38,15 @@ const AllBlogs = async () => {
               }`}
             >
               <div className="relative h-40 md:h-72 lg:h-72 overflow-hidden">
-                <Image
-                  src={blog.image}
-                  alt={blog.title}
-                  layout="fill"
-                  objectFit="cover"
-                  className="transition-transform duration-300 hover:scale-110"
-                />
+                <Link href={`/blog/${blog.id}`}>
+                  <Image
+                    src={blog.image}
+                    alt={blog.title}
+                    layout="fill"
+                    objectFit="cover"
+                    className="transition-transform duration-300 hover:scale-110"
+                  />
+                </Link>
               </div>
               <div className="p-4 flex flex-col h-full">
                 <h3 className="text-xl font-bold mb-2">{blog.title}</h3>
@@ -56,7 +58,7 @@ const AllBlogs = async () => {
                 </div>
                 <p className="mt-2 sm:text-sm line-clamp-2">{blog.summary}</p>
                 <div className="mt-4 gap-4 flex-grow">
-                  <Link href={`/blogs/${blog.id}`}>
+                  <Link href={`/blog/${blog.id}`}>
                     <Button variant="outline">
                       Read More <MoveRight className="ms-2 w-4 h-4" />
                     </Button>

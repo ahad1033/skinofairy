@@ -5,7 +5,7 @@ const Banner = ({ image, title }) => {
     <div className="relative w-full h-[300px] sm:h-[400px] lg:h-[500px] mb-8 md:mb-12 lg:mb-20">
       {/* Dynamic Image */}
       <Image
-        src="/images/banner/banner.jpg"
+        src="/images/banner/blog-cover.webp"
         alt={title}
         layout="fill"
         objectFit="cover"

@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
+
 "use client";
 
 import Link from "next/link";
@@ -12,6 +14,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { ModeToggle } from "./theme-btn";
+import { useTheme } from "next-themes";
 
 // ----------------------------------------------------------------------
 const navLinks = [
@@ -27,6 +30,8 @@ const Navbar = () => {
   const [lastScrollY, setLastScrollY] = useState(0);
 
   const [isOpen, setIsOpen] = useState(false);
+
+  const { theme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -69,7 +74,18 @@ const Navbar = () => {
       <div className="container mx-auto px-4 md:px-8 lg:px-16 py-2 flex items-center justify-between relative">
         {/* Logo */}
         <div className="text-lg font-bold">
-          <Link href="/">Skinofairy</Link>
+          {/* <Link href="/">Skinofairy</Link> */}
+          <Link href="/">
+            <img
+              src={
+                theme === "dark"
+                  ? "/images/logo/logo-light.png"
+                  : "/images/logo/logo-dark.png"
+              }
+              alt="Skinofairy Logo"
+              className="h-10 md:h-16"
+            />
+          </Link>
         </div>
 
         {/* Desktop Menu Links */}
@@ -115,7 +131,18 @@ const Navbar = () => {
             <SheetContent>
               <SheetHeader>
                 <SheetTitle className="text-center font-bold my-4">
-                  Skinofairy
+                  {/* Skinofairy */}
+                  <Link href="/">
+                    <img
+                      src={
+                        theme === "dark"
+                          ? "/images/logo/logo-light.png"
+                          : "/images/logo/logo-dark.png"
+                      }
+                      alt="Skinofairy Logo"
+                      className="h-8"
+                    />
+                  </Link>
                 </SheetTitle>
                 <SheetDescription>
                   <div className="flex flex-col gap-6">

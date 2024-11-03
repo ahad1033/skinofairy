@@ -19,10 +19,12 @@ const geistMono = localFont({
 
 export const metadata = {
   title: "Skinofairy - Your Skincare Guide",
-  description: "Discover expert advice on skincare, solutions for skin problems, beauty tips, and nourishing foods for radiant, healthy skin at Skinofairy.",
+  description:
+    "Discover expert advice on skincare, solutions for skin problems, beauty tips, and nourishing foods for radiant, healthy skin at Skinofairy.",
   openGraph: {
     title: "Skinofairy - Your Skincare Guide",
-    description: "Explore comprehensive guides on skincare, solutions for skin issues, and foods that promote skin health on Skinofairy.",
+    description:
+      "Explore comprehensive guides on skincare, solutions for skin issues, and foods that promote skin health on Skinofairy.",
     url: "https://skinofairy.com",
     images: [
       {
@@ -40,7 +42,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         {/* Google Analytics script */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-1KFR37WHBH"></script>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-1KFR37WHBH"
+        ></script>
         <script
           dangerouslySetInnerHTML={{
             __html: `

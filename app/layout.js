@@ -18,10 +18,10 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "Skinofairy - Your Guide to Skincare & Wellness",
+  title: "Skinofairy - Your Skincare Guide",
   description: "Discover expert advice on skincare, solutions for skin problems, beauty tips, and nourishing foods for radiant, healthy skin at Skinofairy.",
   openGraph: {
-    title: "Skinofairy - Skincare & Wellness Blog",
+    title: "Skinofairy - Your Skincare Guide",
     description: "Explore comprehensive guides on skincare, solutions for skin issues, and foods that promote skin health on Skinofairy.",
     url: "https://skinofairy.com",
     images: [
@@ -29,7 +29,7 @@ export const metadata = {
         url: "https://skinofairy.com/images/og-image.jpg",
         width: 800,
         height: 600,
-        alt: "Skinofairy - Skincare & Wellness Blog",
+        alt: "Skinofairy - Your Skincare Guide",
       },
     ],
   },

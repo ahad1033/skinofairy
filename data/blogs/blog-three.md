@@ -202,7 +202,7 @@ Choosing eco-friendly and compassionate skincare is key to glowing skin. Using v
 
 As we end this journey, let's hold onto what we've learned. The natural way to healthy skin is full of nature's wonders. Let's keep using the **natural skincare ingredients** that nature gives us to care for our skin
 
-# FAQ
+## FAQ
 
 ### What are the benefits of using natural skincare ingredients?
 

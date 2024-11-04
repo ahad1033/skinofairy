@@ -1,12 +1,11 @@
+import Link from "next/link";
 import Image from "next/image";
-// import blogs from "@/data/blogs";
 import { fDate } from "@/lib/fDate";
 import Container from "./Container";
 import { Button } from "./ui/button";
 import { MoveRight } from "lucide-react";
 import ContainerHeader from "./ContainerHeader";
 import { getAllPosts } from "@/lib/mock_blogs";
-import Link from "next/link";
 
 // ----------------------------------------------------------------------
 const shouldTakeTwoColumns = (index) => {
@@ -49,7 +48,9 @@ const AllBlogs = async () => {
                 </Link>
               </div>
               <div className="p-4 flex flex-col h-full">
-                <h3 className="text-xl font-bold mb-2">{blog.title}</h3>
+                <h3 className="text-xl font-bold mb-2">
+                  <Link href={`/blog/${blog.id}`}>{blog.title}</Link>
+                </h3>
                 <div className="flex items-center text-sm text-gray-500 mb-2">
                   <div className="border-l border-gray-400 h-7 mr-2"></div>
                   <p>

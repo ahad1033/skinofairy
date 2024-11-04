@@ -1,6 +1,24 @@
-import Head from "next/head";
 import Container from "@/components/Container";
 import { getPostData } from "@/lib/mock_blogs";
+
+// Use `generateMetadata` to fetch dynamic metadata for each blog post
+export async function generateMetadata({ params }) {
+  const postData = await getPostData(params?.id);
+
+  return {
+    title: postData.title,
+    description: postData.summary,
+    openGraph: {
+      title: postData.title,
+      description: postData.summary,
+      images: postData.image,
+    },
+    twitter: {
+      title: postData.title,
+      description: postData.summary,
+    },
+  };
+}
 
 const BlogDetails = async ({ params }) => {
   const postData = await getPostData(params?.id);
@@ -10,7 +28,7 @@ const BlogDetails = async ({ params }) => {
   return (
     <>
       {/* SEO Metadata */}
-      <Head>
+      {/* <Head>
         <title>{postData.title}</title>
         <meta name="description" content={postData.summary} />
         <meta property="og:title" content={postData.title} />
@@ -18,7 +36,7 @@ const BlogDetails = async ({ params }) => {
         <meta property="og:image" content={postData.image} />
         <meta name="twitter:title" content={postData.title} />
         <meta name="twitter:description" content={postData.summary} />
-      </Head>
+      </Head> */}
 
       <Container className="max-w-screen-2xl">
         <div className="mx-auto">

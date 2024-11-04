@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import Navbar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import BackToTop from "@/components/BackToTop";
+import LenisScroll from "@/components/LenisScroll";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -61,17 +62,19 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Navbar />
-          {children}
-          <Footer />
-          <BackToTop />
-        </ThemeProvider>
+        <LenisScroll>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <Navbar />
+            {children}
+            <Footer />
+            <BackToTop />
+          </ThemeProvider>
+        </LenisScroll>
       </body>
     </html>
   );

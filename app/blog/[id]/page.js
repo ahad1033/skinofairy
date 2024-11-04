@@ -1,5 +1,5 @@
 import Container from "@/components/Container";
-import { getPostData } from "@/lib/mock_blogs";
+import { getAllPostIds, getPostData } from "@/lib/mock_blogs";
 
 // Use `generateMetadata` to fetch dynamic metadata for each blog post
 export async function generateMetadata({ params }) {
@@ -18,6 +18,12 @@ export async function generateMetadata({ params }) {
       description: postData.summary,
     },
   };
+}
+
+// Use `generateStaticParams` to specify which posts to pre-render at build time
+export async function generateStaticParams() {
+  const postIds = await getAllPostIds();
+  return postIds;
 }
 
 const BlogDetails = async ({ params }) => {

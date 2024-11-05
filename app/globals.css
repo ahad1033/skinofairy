@@ -103,3 +103,29 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
 }
+
+/* Custom scrollbar for light theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #01161E;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #E6E6FA;
+  /* border-radius: 4px; */
+}
+
+/* Custom scrollbar for dark theme */
+@media (prefers-color-scheme: dark) {
+  ::-webkit-scrollbar-thumb {
+    background-color: #E6E6FA;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #01161E;
+  }
+}

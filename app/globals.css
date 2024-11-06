@@ -22,7 +22,6 @@
   }
 }
 
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -50,6 +49,9 @@
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
+    /* --heading-color: #A75F37; */
+    /* --heading-color: #2f4156; */
+    /* --paragraph-color: #292421; */
   }
 
   .dark {
@@ -77,9 +79,26 @@
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
+    /* --heading-color: #A75F37; */
+    /* --heading-color: #f6f2ee; */
+    /* --paragraph-color: #fff; */
   }
-}
 
+  /* Apply the heading color to all heading tags */
+
+  /* h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--heading-color);
+  } */
+
+  /* P {
+    color: var(--paragraph-color);
+  } */
+}
 
 @layer base {
   * {
@@ -106,26 +125,26 @@
 
 /* Custom scrollbar for light theme */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 16px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #01161E;
-  border-radius: 4px;
+  background-color: #01161e;
+  border-radius: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #E6E6FA;
+  background-color: #e6e6fa;
   /* border-radius: 4px; */
 }
 
 /* Custom scrollbar for dark theme */
 @media (prefers-color-scheme: dark) {
   ::-webkit-scrollbar-thumb {
-    background-color: #E6E6FA;
+    background-color: #e6e6fa;
   }
-  
+
   ::-webkit-scrollbar-track {
-    background-color: #01161E;
+    background-color: #01161e;
   }
 }

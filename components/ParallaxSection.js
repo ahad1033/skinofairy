@@ -16,12 +16,12 @@ export default function ParallaxSection() {
         }}
       >
         <Parallax className="absolute top-0 left-0 right-0" speed={-10}>
-          <h1 className="text-5xl font-bold pt-32 md:pt-48 text-white">
+          <h1 className="text-5xl font-bold pt-32 sm:pt-20 md:pt-48 text-white">
             Expert Skincare Insights
           </h1>
         </Parallax>
         <Parallax className="absolute bottom-0 left-0 right-0" speed={10}>
-          <p className="text-xl mt-4 max-w-2xl mx-auto pb-32 md:pb-48 text-white">
+          <p className="text-xl mt-4 max-w-2xl mx-auto pb-32 sm:pb-20 md:pb-48 text-white">
             Your trusted source for expert skincare tips, personalized beauty
             advice, and nourishing solutions for achieving radiant and healthy
             skin.

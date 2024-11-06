@@ -30,7 +30,8 @@ export const metadata = {
     url: "https://skinofairy.com",
     images: [
       {
-        url: "https://skinofairy.com/images/og-image.jpg",
+        // url: "https://skinofairy.com/images/og-image.jpg",
+        url: "/images/og-image.webp",
         width: 800,
         height: 600,
         alt: "Skinofairy - Your Skincare Guide",
@@ -65,7 +66,7 @@ export default function RootLayout({ children }) {
         <LenisScroll>
           <ThemeProvider
             attribute="class"
-            defaultTheme="system"
+            defaultTheme="light"
             enableSystem
             disableTransitionOnChange
           >

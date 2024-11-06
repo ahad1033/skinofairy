@@ -30,7 +30,7 @@ const AllBlogs = async () => {
           ?.map((blog, index) => (
             <div
               key={index}
-              className={`rounded-lg shadow-md overflow-hidden h-[400px] md:h-[500px] lg:h-[500px] ${
+              className={`rounded-lg shadow-md overflow-hidden h-[420px] md:h-[550px] lg:h-[550px] ${
                 shouldTakeTwoColumns(index)
                   ? "col-span-1 md:col-span-2 lg:col-span-2"
                   : "col-span-1 md:col-span-1 lg:col-span-1"
@@ -48,9 +48,11 @@ const AllBlogs = async () => {
                 </Link>
               </div>
               <div className="p-4 flex flex-col h-full">
-                <h3 className="text-xl font-bold mb-2">
-                  <Link href={`/blog/${blog.id}`}>{blog.title}</Link>
-                </h3>
+                <div className="h-auto md:h-20 lg:h-20">
+                  <h3 className="text-xl md:text-3xl font-bold mb-2">
+                    <Link href={`/blog/${blog.id}`}>{blog.title}</Link>
+                  </h3>
+                </div>
                 <div className="flex items-center text-sm text-gray-500 mb-2">
                   <div className="border-l border-gray-400 h-7 mr-2"></div>
                   <p>

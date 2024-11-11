@@ -19,8 +19,8 @@ const YouMayLike = async () => {
 
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6 md:gap-8">
         {allPostsData
-          ?.slice(0, 4)
           ?.reverse()
+          ?.slice(2, 6)
           ?.map((blog, index) => (
             <div
               key={index}
@@ -48,7 +48,8 @@ const YouMayLike = async () => {
                 <div className="flex items-center text-sm text-gray-500">
                   <div className="border-l border-gray-400 h-7 mr-2"></div>
                   <p className="text-xs md:text-sm lg:text-base">
-                    By {blog.author} on {fDate(blog.date)}
+                    By <span className="font-bold">{blog.author}</span> on{" "}
+                    <span className="font-bold">{fDate(blog.date)}</span>
                   </p>
                 </div>
               </div>

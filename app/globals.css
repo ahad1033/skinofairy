@@ -125,12 +125,12 @@
 
 /* Custom scrollbar for light theme */
 ::-webkit-scrollbar {
-  width: 16px;
+  width: 12px;
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: #01161e;
-  border-radius: 8px;
+  border-radius: 6px;
 }
 
 ::-webkit-scrollbar-track {

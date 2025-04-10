@@ -4,6 +4,7 @@ import { getAllPostIds, getPostData } from "@/lib/mock_blogs";
 // Use `generateMetadata` to fetch dynamic metadata for each blog post
 export async function generateMetadata({ params }) {
   const postData = await getPostData(params?.id);
+  const canonicalUrl = `https://www.skinofairy.com/blog/${params?.id}`;
 
   return {
     title: postData.title,
@@ -12,10 +13,14 @@ export async function generateMetadata({ params }) {
       title: postData.title,
       description: postData.summary,
       images: postData.image,
+      url: canonicalUrl,
     },
     twitter: {
       title: postData.title,
       description: postData.summary,
+    },
+    alternates: {
+      canonical: canonicalUrl,
     },
   };
 }
@@ -33,17 +38,6 @@ const BlogDetails = async ({ params }) => {
 
   return (
     <>
-      {/* SEO Metadata */}
-      {/* <Head>
-        <title>{postData.title}</title>
-        <meta name="description" content={postData.summary} />
-        <meta property="og:title" content={postData.title} />
-        <meta property="og:description" content={postData.summary} />
-        <meta property="og:image" content={postData.image} />
-        <meta name="twitter:title" content={postData.title} />
-        <meta name="twitter:description" content={postData.summary} />
-      </Head> */}
-
       <Container className="max-w-screen-2xl">
         <div className="mx-auto">
           <div

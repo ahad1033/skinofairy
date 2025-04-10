@@ -27,7 +27,7 @@ export const metadata = {
     title: "Skinofairy - Your Skincare Guide",
     description:
       "Explore comprehensive guides on skincare, solutions for skin issues, and foods that promote skin health on Skinofairy.",
-    url: "https://skinofairy.com",
+    url: "https://www.skinofairy.com",
     images: [
       {
         // url: "https://skinofairy.com/images/og-image.jpg",

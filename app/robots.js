@@ -7,6 +7,6 @@ export default function robots() {
         disallow: [],
       },
     ],
-    sitemap: "http://skinofairy.com/sitemap.xml",
+    sitemap: "https://www.skinofairy.com/sitemap.xml",
   };
 }

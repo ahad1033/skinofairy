@@ -12,11 +12,11 @@ import ContainerHeader from "@/components/ContainerHeader";
 
 // ----------------------------------------------------------------------
 export const metadata = {
-  title: "Skinofairy - Your Skincare Guide",
+  title: "Skinofairy - Blogs",
   description:
     "Discover expert advice on skincare, solutions for skin problems, beauty tips, and nourishing foods for radiant, healthy skin at Skinofairy.",
   openGraph: {
-    title: "Skinofairy - Your Skincare Guide",
+    title: "Skinofairy - Blogs",
     description:
       "Explore comprehensive guides on skincare, solutions for skin issues, and foods that promote skin health on Skinofairy.",
     url: "https://www.skinofairy.com/blogs",
@@ -25,7 +25,7 @@ export const metadata = {
         url: "/images/og-image.webp",
         width: 800,
         height: 600,
-        alt: "Skinofairy - Your Skincare Guide",
+        alt: "Skinofairy - Blogs",
       },
     ],
     alternates: {

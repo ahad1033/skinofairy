@@ -4,11 +4,11 @@ import ContactForm from "@/components/ContactForm";
 // ----------------------------------------------------------------------
 
 export const metadata = {
-  title: "Skinofairy - Your Skincare Guide",
+  title: "Skinofairy - Contact Us",
   description:
     "Discover expert advice on skincare, solutions for skin problems, beauty tips, and nourishing foods for radiant, healthy skin at Skinofairy.",
   openGraph: {
-    title: "Skinofairy - Your Skincare Guide",
+    title: "Skinofairy - Contact Us",
     description:
       "Explore comprehensive guides on skincare, solutions for skin issues, and foods that promote skin health on Skinofairy.",
     url: "https://www.skinofairy.com/contact",
@@ -17,7 +17,7 @@ export const metadata = {
         url: "/images/og-image.webp",
         width: 800,
         height: 600,
-        alt: "Skinofairy - Your Skincare Guide",
+        alt: "Skinofairy - Contact Us",
       },
     ],
     alternates: {

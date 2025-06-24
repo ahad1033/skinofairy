@@ -7,19 +7,19 @@ import { motion } from "framer-motion";
 // ANIMATION VARIANT
 const variants = {
   heading: {
-    hidden: { opacity: 0, y: 50 },
+    hidden: { opacity: 0, y: 40 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.8, ease: "easeOut" },
+      transition: { duration: 0.5, ease: "easeOut" },
     },
   },
   paragraph: {
-    hidden: { opacity: 0, y: -50 },
+    hidden: { opacity: 0, y: -30 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.8, ease: "easeOut", delay: 0.3 },
+      transition: { duration: 0.5, ease: "easeOut", delay: 0.2 },
     },
   },
 };
@@ -31,7 +31,7 @@ const Banner = () => {
       <Image
         fill
         priority
-        quality={100}
+        quality={75}
         alt="Blog Banner"
         className="object-cover"
         src="/images/banner/blog-cover.webp"
@@ -39,9 +39,6 @@ const Banner = () => {
 
       <div className="absolute inset-0 bg-black/50 z-10 flex justify-center items-center">
         <div className="text-center text-white p-4">
-          {/* <h1 className="font-bold text-3xl md:text-7xl lg:text-8xl sm:text-3xl mb-5 tracking-normal md:tracking-wide lg:tracking-widest">
-            Revitalize Your Journey
-          </h1> */}
           <motion.h1
             className="font-bold text-3xl md:text-7xl lg:text-8xl sm:text-3xl mb-5 tracking-normal md:tracking-wide lg:tracking-widest"
             initial="hidden"

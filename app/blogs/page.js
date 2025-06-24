@@ -5,7 +5,7 @@ import { MoveRight } from "lucide-react";
 import { fDate } from "@/lib/fDate";
 import { Button } from "@/components/ui/button";
 
-import { getAllPosts, getPostData } from "@/lib/mock_blogs";
+import { getAllPosts } from "@/lib/mock_blogs";
 
 import Container from "@/components/Container";
 import ContainerHeader from "@/components/ContainerHeader";
@@ -43,7 +43,7 @@ const isFirstBlog = (index) => {
 
 const BlogsPage = async () => {
   const allPostsData = await getAllPosts();
-  const single = await getPostData("blog-one");
+  // const single = await getPostData("blog-one");
 
   return (
     <Container className="max-w-screen-lg">
@@ -51,7 +51,6 @@ const BlogsPage = async () => {
         title="Our Blogs"
         subtitle="Get informed about the latest trends"
       />
-
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {allPostsData.reverse().map((blog, index) => (
@@ -67,9 +66,9 @@ const BlogsPage = async () => {
                 <Image
                   src={blog.image}
                   alt={blog.title}
-                  layout="fill"
-                  objectFit="cover"
+                  fill
                   className="transition-transform duration-300 hover:scale-110"
+                  priority={isFirstBlog(index)}
                 />
               </Link>
             </div>

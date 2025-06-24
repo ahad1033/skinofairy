@@ -1,20 +1,42 @@
-// import BannerTwo from "@/components/BannerTwo";
 import AllBlogs from "@/components/Blogs";
-// import Categories from "@/components/Categories";
 import Banner from "@/components/HomeBanner";
-import ParallaxSection from "@/components/ParallaxSection";
 import YouMayLike from "@/components/YouMayLike";
+import ParallaxSection from "@/components/ParallaxSection";
 
 // ----------------------------------------------------------------------
+export const metadata = {
+  title: "Skinofairy - Your Skincare Guide",
+  description:
+    "Discover expert advice on skincare, solutions for skin problems, beauty tips, and nourishing foods for radiant, healthy skin at Skinofairy.",
+  openGraph: {
+    title: "Skinofairy - Your Skincare Guide",
+    description:
+      "Explore comprehensive guides on skincare, solutions for skin issues, and foods that promote skin health on Skinofairy.",
+    url: "https://www.skinofairy.com",
+    images: [
+      {
+        url: "/images/og-image.webp",
+        width: 800,
+        height: 600,
+        alt: "Skinofairy - Your Skincare Guide",
+      },
+    ],
+    alternates: {
+      canonical: "https://www.skinofairy.com",
+    },
+  },
+};
+
 export default function Home() {
   return (
-    <main>
-      {/* <BannerTwo /> */}
+    <>
       <Banner />
-      {/* <Categories /> */}
+
       <AllBlogs />
+
       <ParallaxSection />
+
       <YouMayLike />
-    </main>
+    </>
   );
 }

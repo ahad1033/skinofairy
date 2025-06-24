@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/next-script-for-ga */
+
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -19,26 +21,28 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-export const metadata = {
-  title: "Skinofairy - Your Skincare Guide",
-  description:
-    "Discover expert advice on skincare, solutions for skin problems, beauty tips, and nourishing foods for radiant, healthy skin at Skinofairy.",
-  openGraph: {
-    title: "Skinofairy - Your Skincare Guide",
-    description:
-      "Explore comprehensive guides on skincare, solutions for skin issues, and foods that promote skin health on Skinofairy.",
-    url: "https://www.skinofairy.com",
-    images: [
-      {
-        // url: "https://skinofairy.com/images/og-image.jpg",
-        url: "/images/og-image.webp",
-        width: 800,
-        height: 600,
-        alt: "Skinofairy - Your Skincare Guide",
-      },
-    ],
-  },
-};
+// export const metadata = {
+//   title: "Skinofairy - Your Skincare Guide",
+//   description:
+//     "Discover expert advice on skincare, solutions for skin problems, beauty tips, and nourishing foods for radiant, healthy skin at Skinofairy.",
+//   openGraph: {
+//     title: "Skinofairy - Your Skincare Guide",
+//     description:
+//       "Explore comprehensive guides on skincare, solutions for skin issues, and foods that promote skin health on Skinofairy.",
+//     url: "https://www.skinofairy.com",
+//     images: [
+//       {
+//         url: "/images/og-image.webp",
+//         width: 800,
+//         height: 600,
+//         alt: "Skinofairy - Your Skincare Guide",
+//       },
+//     ],
+//     alternates: {
+//       canonical: "https://www.skinofairy.com",
+//     },
+//   },
+// };
 
 export default function RootLayout({ children }) {
   return (
@@ -62,6 +66,7 @@ export default function RootLayout({ children }) {
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        suppressHydrationWarning
       >
         <LenisScroll>
           <ThemeProvider

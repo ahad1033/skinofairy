@@ -11,6 +11,29 @@ import Container from "@/components/Container";
 import ContainerHeader from "@/components/ContainerHeader";
 
 // ----------------------------------------------------------------------
+export const metadata = {
+  title: "Skinofairy - Your Skincare Guide",
+  description:
+    "Discover expert advice on skincare, solutions for skin problems, beauty tips, and nourishing foods for radiant, healthy skin at Skinofairy.",
+  openGraph: {
+    title: "Skinofairy - Your Skincare Guide",
+    description:
+      "Explore comprehensive guides on skincare, solutions for skin issues, and foods that promote skin health on Skinofairy.",
+    url: "https://www.skinofairy.com/blogs",
+    images: [
+      {
+        url: "/images/og-image.webp",
+        width: 800,
+        height: 600,
+        alt: "Skinofairy - Your Skincare Guide",
+      },
+    ],
+    alternates: {
+      canonical: "https://www.skinofairy.com/blogs",
+    },
+  },
+};
+
 // Checks if it's the first blog to use a special layout
 const isFirstBlog = (index) => {
   return index === 0;
@@ -29,12 +52,6 @@ const BlogsPage = async () => {
         subtitle="Get informed about the latest trends"
       />
 
-      {/* <div className="mx-auto">
-        <div
-          className="prose prose-lg mx-auto dark:prose-invert"
-          dangerouslySetInnerHTML={{ __html: single.contentHtml }}
-        />
-      </div> */}
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {allPostsData.reverse().map((blog, index) => (

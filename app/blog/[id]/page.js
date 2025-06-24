@@ -34,13 +34,11 @@ export async function generateStaticParams() {
 const BlogDetails = async ({ params }) => {
   const postData = await getPostData(params?.id);
 
-  console.log(postData);
-
   return (
     <Container className="max-w-screen-2xl">
       <div className="mx-auto">
         <div
-          className="prose prose-lg mx-auto dark:prose-invert"
+          className="prose prose-2xl mx-auto dark:prose-invert"
           dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
         />
       </div>

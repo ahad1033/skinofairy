@@ -2,11 +2,13 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
+import { MoveRight } from "lucide-react";
+
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-import { MoveRight } from "lucide-react";
+
 import Container from "./Container";
 
 // ----------------------------------------------------------------------
@@ -36,7 +38,7 @@ export const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission logic here
-    console.log("Form Submitted: ", formData);
+    // console.log("Form Submitted: ", formData);
   };
 
   return (

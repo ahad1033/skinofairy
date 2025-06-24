@@ -1,12 +1,14 @@
-import React from "react";
-import Image from "next/image";
-import { fDate } from "@/lib/fDate";
-import { MoveRight } from "lucide-react";
-import Container from "@/components/Container";
-import { Button } from "@/components/ui/button";
-import ContainerHeader from "@/components/ContainerHeader";
-import { getAllPosts, getPostData } from "@/lib/mock_blogs";
 import Link from "next/link";
+import Image from "next/image";
+import { MoveRight } from "lucide-react";
+
+import { fDate } from "@/lib/fDate";
+import { Button } from "@/components/ui/button";
+
+import { getAllPosts, getPostData } from "@/lib/mock_blogs";
+
+import Container from "@/components/Container";
+import ContainerHeader from "@/components/ContainerHeader";
 
 // ----------------------------------------------------------------------
 // Checks if it's the first blog to use a special layout
@@ -19,9 +21,6 @@ const isFirstBlog = (index) => {
 const BlogsPage = async () => {
   const allPostsData = await getAllPosts();
   const single = await getPostData("blog-one");
-
-  console.log("MD BLOGS:", allPostsData);
-  console.log("BLOGS-1:", single);
 
   return (
     <Container className="max-w-screen-lg">
@@ -75,21 +74,22 @@ const BlogsPage = async () => {
                   By {blog.author} on {fDate(blog.date)}
                 </p>
               </div>
+
               <p className="text-muted-foreground text-sm md:text-base lg:text-base line-clamp-3">
                 {blog.summary}
               </p>
+
               {/* <div className="mt-4 gap-4 flex-grow">
                 <Button>
                   Read More <MoveRight className="ms-2 w-4 h-4" />
                 </Button>
               </div> */}
+
               <div className="mt-4 gap-4 flex-grow">
                 <Link href={`/blog/${blog.id}`}>
-                  {/* <a className="mt-4 flex items-center gap-2 text-blue-600"> */}
                   <Button>
                     Read More <MoveRight className="ms-2 w-4 h-4" />
                   </Button>
-                  {/* </a> */}
                 </Link>
               </div>
             </div>

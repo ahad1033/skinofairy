@@ -37,16 +37,14 @@ const BlogDetails = async ({ params }) => {
   console.log(postData);
 
   return (
-    <>
-      <Container className="max-w-screen-2xl">
-        <div className="mx-auto">
-          <div
-            className="prose prose-lg mx-auto dark:prose-invert"
-            dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
-          />
-        </div>
-      </Container>
-    </>
+    <Container className="max-w-screen-2xl">
+      <div className="mx-auto">
+        <div
+          className="prose prose-lg mx-auto dark:prose-invert"
+          dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+        />
+      </div>
+    </Container>
   );
 };
 

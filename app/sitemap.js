@@ -24,7 +24,7 @@ export default async function sitemap() {
 
   // Dynamic blog pages
   const blogPosts = getAllPosts();
-  const blogUrls = blogPosts.map((post) => ({
+  const blogUrls = blogPosts?.map((post) => ({
     url: `https://www.skinofairy.com/blog/${post.id}`,
     lastModified: new Date(post.date),
     changeFrequency: "weekly",

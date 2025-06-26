@@ -17,10 +17,9 @@ const YouMayLike = async () => {
         subtitle="Discover More Engaging Content"
       />
 
-      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6 md:gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
         {allPostsData
-          ?.reverse()
-          ?.slice(2, 6)
+          ?.slice(2, 5)
           ?.map((blog, index) => (
             <div
               key={index}

@@ -25,7 +25,8 @@ const AllBlogs = async () => {
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
         {allPostsData
-          ?.slice(0, 6)
+          ?.reverse()
+          ?.slice(0, 4)
           .reverse()
           ?.map((blog, index) => (
             <div

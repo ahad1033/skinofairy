@@ -14,6 +14,14 @@ export async function generateMetadata({ params }) {
       description: postData.summary,
       images: postData.image,
       url: canonicalUrl,
+      images: [
+        {
+          url: postData.image,
+          width: 800,
+          height: 600,
+          alt: postData.title,
+        },
+      ],
     },
     twitter: {
       title: postData.title,

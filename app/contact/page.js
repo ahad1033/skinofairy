@@ -6,11 +6,15 @@ import ContactForm from "@/components/ContactForm";
 export const metadata = {
   title: "Skinofairy - Contact Us",
   description:
-    "Discover expert advice on skincare, solutions for skin problems, beauty tips, and nourishing foods for radiant, healthy skin at Skinofairy.",
+    "Have questions about skincare, blog topics, or collaborations? Contact Skinofairy for personalized support, partnership opportunities, and expert advice.",
+  robots: {
+    index: false,
+    follow: true,
+  },
   openGraph: {
     title: "Skinofairy - Contact Us",
     description:
-      "Explore comprehensive guides on skincare, solutions for skin issues, and foods that promote skin health on Skinofairy.",
+      "Have questions about skincare, blog topics, or collaborations? Contact Skinofairy for personalized support, partnership opportunities, and expert advice.",
     url: "https://www.skinofairy.com/contact",
     images: [
       {

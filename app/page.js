@@ -11,7 +11,7 @@ export const metadata = {
   openGraph: {
     title: "Skinofairy - Your Skincare Guide",
     description:
-      "Explore comprehensive guides on skincare, solutions for skin issues, and foods that promote skin health on Skinofairy.",
+      "Discover expert advice on skincare, solutions for skin problems, beauty tips, and nourishing foods for radiant, healthy skin at Skinofairy.",
     url: "https://www.skinofairy.com",
     images: [
       {

@@ -14,7 +14,7 @@ import ContainerHeader from "@/components/ContainerHeader";
 export const metadata = {
   title: "Skinofairy - Blogs",
   description:
-    "Discover expert advice on skincare, solutions for skin problems, beauty tips, and nourishing foods for radiant, healthy skin at Skinofairy.",
+    "Explore comprehensive guides on skincare, solutions for skin issues, and foods that promote skin health on Skinofairy.",
   openGraph: {
     title: "Skinofairy - Blogs",
     description:

@@ -24,9 +24,9 @@ export const metadata = {
         alt: "Skinofairy - Contact Us",
       },
     ],
-    alternates: {
-      canonical: "https://www.skinofairy.com/contact",
-    },
+  },
+  alternates: {
+    canonical: "https://www.skinofairy.com/contact",
   },
 };
 

@@ -38,10 +38,10 @@ const geistMono = localFont({
 //         alt: "Skinofairy - Your Skincare Guide",
 //       },
 //     ],
+//   },
 //     alternates: {
 //       canonical: "https://www.skinofairy.com",
 //     },
-//   },
 // };
 
 export default function RootLayout({ children }) {

@@ -21,9 +21,9 @@ export const metadata = {
         alt: "Skinofairy - Your Skincare Guide",
       },
     ],
-    alternates: {
-      canonical: "https://www.skinofairy.com",
-    },
+  },
+  alternates: {
+    canonical: "https://www.skinofairy.com",
   },
 };
 

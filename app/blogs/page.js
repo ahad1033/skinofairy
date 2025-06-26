@@ -28,9 +28,9 @@ export const metadata = {
         alt: "Skinofairy - Blogs",
       },
     ],
-    alternates: {
-      canonical: "https://www.skinofairy.com/blogs",
-    },
+  },
+  alternates: {
+    canonical: "https://www.skinofairy.com/blogs",
   },
 };
 

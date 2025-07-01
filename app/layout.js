@@ -48,6 +48,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        {/* Google Adsense */}
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1576397222364462"
+          crossorigin="anonymous"
+        ></script>
+
         {/* Google Analytics script */}
         <script
           async
